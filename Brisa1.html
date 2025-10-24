@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.cdnfonts.com/css/nickerbocker-normal" rel="stylesheet">
+                
+    <title>Brisa Cruz Santiago</title>
+</head>
+<body>
+    <style>
+        :root{
+        --barn-red: #780000ff;
+        --fire-brick: #c1121fff;
+        --papaya-whip: #fdf0d5ff;
+        --prussian-blue: #003049ff;
+        --air-superiority-blue: #669bbcff;
+        }
+        body {
+            background-color: rgba(182, 211, 229, 0.705);
+        }
+        h1  {
+            font-family: 'Nickerbocker-Normal', sans-serif;
+        }
+    </style>
+    <nav class="navbar navbar-light" style="background-color:var(--prussian-blue);">
+
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color:var(--papaya-whip);">Inicio</a>
+ 
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  href="index.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 1 Ciberseguridad</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+          <a class="dropdown-item" href="Brisa1.html">Conceptos</a><br>
+          <a class="dropdown-item" href="Brisa2.html">Ataques</a><br>
+          <a class="dropdown-item" href="Brisa3.html">Protección</a>
+        </div>
+      </li>
+    </ul>
+      <ul class="nav navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  href="Brisa7.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 2</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+            <a class="dropdown-item" href="Brisa4.html">Calculadora</a><br>
+            <a class="dropdown-item" href="Brisa5.html">Perfil</a><br>
+            <a class="dropdown-item" href="Brisa6.html">Peliculas</a><br>
+            <a class="dropdown-item" href="Brisa7.html">Página final</a>
+          </div>
+        </li>
+        </ul>
+        <ul class="nav navbar-nav ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  href="unidad3.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 3</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+              <a class="dropdown-item"href="/#7.html">Conceptos</a><br>
+              <a class="dropdown-item"href="/#8.html">Ataques</a><br>
+              <a class="dropdown-item"href="/#9.html">Protección</a>
+            </div>
+          </li>
+          </ul>
+</nav>
+    </div>
+
+    <h1 style="color:red; top:50px;">Ciberseguridad 01</h1>
+    <h2 style="color: red; top: 70px;">Tipos de Malware</h2>
+
+    <table class="tabla-ciber">
+        <tr>
+            <th>Tipo de Malware</th>
+            <th>Función</th>
+            <th>Impacto</th>
+        </tr>
+        <tr>
+            <td>Virus</td>
+            <td>Autoreplicable, infecta arhivos</td>
+            <td>Daño de datos al igual que de sistema</td>
+        </tr>
+        <tr>
+            <td>Gusano</td>
+            <td>Se propaga a traves de las redes</td>
+            <td>Interrupción de la red, agotamiento de recursos</td>
+        </tr>
+        <tr>
+            <td>Caballo de troya</td>
+            <td>Se disfraza de software legitimo</td>
+            <td>Robo de datos, control de sistema</td>
+        </tr>
+        <tr>
+            <td>Ransomware</td>
+            <td>Cifra archivos y exige el pago</td>
+            <td>Robo de datos, control del sistema</td>
+        </tr>
+        <tr>
+            <td>Software espia</td>
+            <td>Supervisa en secreto la atividad del usuario</td>
+            <td>Valoracion de privacidad, robo de datos</td>
+        </tr>
+        <tr>
+            <td>Software publicitario (Adware)</td>
+            <td>Muestra anuncios no deseados</td>
+            <td>Molestia, de gradación del rendimiento</td>
+        </tr>
+        <tr>
+            <td>Rootkit</td>
+            <td>Ocultar software malicioso</td>
+            <td>Acceso no autorizado, amenazas persistentes</td>
+        </tr>
+        <tr>
+            <td>Keylogger</td>
+            <td>Registra las pulsaciones de teclas</td>
+            <td>Robo de credenciales, filtración de datos</td>
+        </tr>
+        <tr>
+            <td>Fileless Malware <br> Malware sin archivos</td>
+            <td>Corre de la memoria</td>
+            <td>Ataques sigilosos y dificiles de detectar</td>
+        </tr>
+        <tr>
+            <td>Cryptojacker</td>
+            <td>Minas de criptomonedas</td>
+            <td>Problemas de rendimiento, secuestro de recursos</td>
+        </tr>
+        <tr>
+            <td>Red de boots (Botnet)</td>
+            <td>Crea una red de dispositivos</td>
+            <td>Ataque, distribución de spam</td>
+        </tr>
+        <tr>
+            <td>Bomba Lógica (logic Bomb)</td>
+            <td>Ejecuta codigo en el disparador</td>
+            <td>Destrucción de datos, daños al sistema</td>
+        </tr>
+    </table>
+</body>
+</html>

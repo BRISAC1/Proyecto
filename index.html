@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <link href="https://fonts.cdnfonts.com/css/nickerbocker-normal" rel="stylesheet">
+
+    <title>Brisa Cruz Santiago</title>
+</head>
+<body>
+<style>
+  :root{
+    --barn-red: #780000ff;
+    --fire-brick: #c1121fff;
+    --papaya-whip: #fdf0d5ff;
+    --prussian-blue: #003049ff;
+    --air-superiority-blue: #669bbcff;
+    }
+
+
+  body{
+    background-color: var(--air-superiority-blue);
+  }
+  .fondo-section{
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url("fondo.jpg") no-repeat center center/cover;
+  }
+  .fondo-section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+  }
+  .fondo-text{
+    position: relative;
+    z-index: 2;
+  }
+  .fondo-text h1,
+  .fondo-text h3,
+  .fondo-text p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: bold;
+    background: url("fondo.jpg") no-repeat center center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 5px;
+
+  }
+</style>
+
+<script>
+  function abrirPerfil() {
+    var ventana = window.open(
+      "Brisa5.html",
+      "PerfilGambit",
+      "width=900,height=700,resizable=yes,scrollbars=yes"
+    );
+
+    if (ventana) {
+      ventana.onload = function() {
+        ventana.document.body.style.width = "100%";
+        ventana.document.body.style.height = "100%";
+        ventana.document.body.style.margin = "0";
+        ventana.document.body.style.overflow = "auto";
+      };
+    } 
+  }
+</script>
+
+<script>
+  
+</script>
+
+<nav class="navbar navbar-light" style="background-color:var(--prussian-blue);">
+
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color:var(--papaya-whip)">Inicio</a>
+ 
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  href="index.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 1 Ciberseguridad</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+          <a class="dropdown-item" href="Brisa1.html">Conceptos</a><br>
+          <a class="dropdown-item" href="Brisa2.html">Ataques</a><br>
+          <a class="dropdown-item" href="Brisa3.html">Protección</a>
+        </div>
+      </li>
+    </ul>
+      <ul class="nav navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  href="Brisa7.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 2</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+            <a class="dropdown-item" href="Brisa4.html">Calculadora</a><br>
+            <a class="dropdown-item" href="Brisa5.html">Perfil</a><br>
+            <a class="dropdown-item" href="Brisa6.html">Peliculas</a><br>
+            <a class="dropdown-item" href="Brisa7.html">Página final</a>
+          </div>
+        </li>
+        </ul>
+        <ul class="nav navbar-nav ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  href="unidad3.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 3</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+              <a class="dropdown-item"href="/#7.html">Conceptos</a><br>
+              <a class="dropdown-item"href="/#8.html">Ataques</a><br>
+              <a class="dropdown-item"href="/#9.html">Protección</a>
+            </div>
+          </li>
+          </ul>
+
+    <ul class="nav navbar-nav navbar-right social-buttons">
+  <li>
+    <a href="https://www.youtube.com/" target="_blank" class="btn btn-social btn-youtube">
+      <span class="glyphicon glyphicon-facetime-video"></span> Youtube
+    </a>
+  </li>
+  <li>
+    <a href="https://www.tiktok.com/" target="_blank" class="btn btn-social btn-tiktok">
+      <span class="glyphicon glyphicon-music"></span> TikTok
+    </a>
+  </li>
+  <li>
+    <a href="Brisa5.html" target="_blank" class="btn btn-social btn-profile">
+      <span class="glyphicon glyphicon-user"></span> Perfil
+    </a>
+  </li>
+</ul>
+
+</nav>
+  <button onclick="abrirPerfil()"> <span class="glyphicon glyphicon-user"></span>Perfil</button>
+
+    <div class="jumbotron" style="background-color: var(--air-superiority-blue); color: var(--papaya-whip);">
+      
+      <div class="fondo-text">
+        <h1>Brisa Cruz</h1>
+        <h3>Programación 5toA</h3>
+        <p>Construye paginas web</p>
+      </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.cdnfonts.com/css/nickerbocker-normal" rel="stylesheet">
+
+    <title>Brisa Cruz Santiago</title>
+</head>
+<body>
+  <style>
+     :root{
+    --barn-red: #780000ff;
+    --fire-brick: #c1121fff;
+    --papaya-whip: #fdf0d5ff;
+    --prussian-blue: #003049ff;
+    --air-superiority-blue: #669bbcff;
+    }
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: var(--barn-red);
+        color: #0f0000;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .tabla-ciber{
+        top:50px ;
+        width: 90%;
+        margin: 40px auto;
+        border-collapse: collapse;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        box-shadow: 0px 4px 15px black;
+        background-color: var(--air-superiority-blue);
+        border-radius: 12px;
+        overflow: hidden;
+        position: absolute;
+    }
+    .tabla-ciber thead{
+        background-color: var(--air-superiority-blue);
+        color:var(--prussian-blue);
+    }
+    .tabla-ciber th
+    .tabla-ciber td {
+        padding: 14px 18px;
+        text-align: center;
+        border: 1px solid var(--prussian-blue);
+        font-size: 16px;
+    }
+    .tabla-ciber th {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .tabla-ciber tr:nth-child(even){
+        background-color: var(--prussian-blue);
+        color: var(--papaya-whip);
+    }
+    .tabla-ciber tr:nth-child(odd){
+        background-color: var(--papaya-whip);
+        color: var(--barn-red);
+    }
+    .table-ciber tr:hover {
+        background:var(--air-superiority-blue);
+        color: var(--prussian-blue);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+    }
+    .tabla-ciber img{
+        width: 70px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0,3);
+    }
+    h1{
+        top:50px;
+        position: absolute;
+    }
+
+  </style>
+<div class="container">
+    <nav class="navbar navbar-light" style="background-color:var(--prussian-blue); position: absolute;">
+
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color:var(--papaya-whip);">Inicio</a>
+ 
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  href="index.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 1 Ciberseguridad</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+        <a class="dropdown-item" href="Brisa1.html">Conceptos</a><br>
+          <a class="dropdown-item" href="Brisa2.html">Ataques</a><br>
+          <a class="dropdown-item" href="Brisa3.html">Protección</a>
+        </div>
+      </li>
+    </ul>
+      <ul class="nav navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  href="Brisa7.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 2</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+            <a class="dropdown-item" href="Brisa4.html">Calculadora</a><br>
+            <a class="dropdown-item" href="Brisa5.html">Perfil</a><br>
+            <a class="dropdown-item" href="Brisa6.html">Peliculas</a><br>
+            <a class="dropdown-item" href="Brisa7.html">Página final</a>
+          </div>
+        </li>
+        </ul>
+        <ul class="nav navbar-nav ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  href="unidad3.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 3</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+              <a class="dropdown-item"href="/#7.html">Conceptos</a><br>
+              <a class="dropdown-item"href="/#8.html">Ataques</a><br>
+              <a class="dropdown-item"href="/#9.html">Protección</a>
+            </div>
+          </li>
+          </ul>
+</nav>
+</div>
+
+    <table class="tabla-ciber" id="tablaCiberseguridad">
+        <tr>
+            <th>Ataque</th>
+            <th>Protección</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+     </tbody>
+   
+    </table>
+    <script>
+
+        const ataques = [
+
+        {
+            "ataque": "Phishing", 
+            "proteccion": "Verificar remitente y URL, nunca dar datos en enlaces sospechosos, usar filtros antispam.",
+            "imagen":"https://tse3.mm.bing.net/th/id/OIP.zGVyHciNgGxe53wpJp38XQHaE8?pid=Api&P=0&h=180"
+        },
+
+        {
+            "ataque": "Malware", 
+            "proteccion":"Instalar y actualizar antivirus/antimalware, no descargar software pirata.",
+            "imagen":"https://tse3.mm.bing.net/th/id/OIP.9fdUmMzAelWWrAOwcXGQjQHaEK?pid=Api&P=0&h=180"
+        },
+
+        {
+            "ataque": "Virus", 
+            "proteccion": "Mantener copias de seguridad, escaneo regular del sistema, actualización de parches.",
+            "imagen":"https://tecnetone.com/hubfs/Ataques%20de%20Escaneo%20de%20Puertos.png"
+        },
+
+        {
+            "ataque": "Worm (Gusano)", 
+            "ejemplo": "Firewalls activos, aplicar parches de seguridad, monitorear red.",
+            "imagen":"https://tse4.mm.bing.net/th/id/OIP.wuyPCZJmHBaDP_whF0XUVgHaEA?pid=Api&P=0&h=180"
+        },
+
+        { 
+            "ataque": "Botnet", 
+            "proteccion": "Cambiar contraseñas predeterminadas, actualizar dispositivos IoT, usar detección de intrusos.",
+            "imagen":"https://tse2.mm.bing.net/th/id/OIP.6Lu2AJOGXeN-D5673sPSrQHaE7?pid=Api&P=0&h=180"
+        },
+
+        {
+            "ataque": "DDoS (Distributed Denial of Service)", 
+            "proteccion": "Usar servicios de mitigación DDoS, balanceadores de carga, limitar tráfico sospechoso.",
+            "imagen":"https://www.redeszone.net/app/uploads-redeszone.net/2020/03/load-balancers.jpg"
+
+        },
+
+        {
+            "ataque": "Packet sniffer (capturador de paquetes)", 
+            "proteccion": "Usar HTTPS/VPN, cifrar datos (TLS/SSL), redes seguras.",
+            "imagen":"https://tse3.mm.bing.net/th/id/OIP.__XALczLokAW46tM8rscEwHaDt?pid=Api&P=0&h=180"
+
+        },
+        {
+            "ataque": "IP spoofing", 
+            "proteccion": "Firewalls configurados, autenticación de paquetes, filtros de tráfico.",
+            "imagen":"https://tse2.mm.bing.net/th/id/OIP.veS2Kw7PtNQdefspdm684QHaDt?pid=Api&P=0&h=180"
+
+        },
+        {
+            "ataque": "MITM — Man-in-the-Middle (hombre en el medio)", 
+            "proteccion": "Cifrar conexiones (SSL/TLS), evitar Wi-Fi públicas abiertas, VPN confiable.",
+            "imagen":"https://periodistasdegenero.org/wp-content/uploads/2024/08/1724461212_490_8-consejos-para-proteger-tu-informacion-en-redes-WiFi-publicas.png"
+        },
+        {
+            "ataque": "Compromised-key attack (ataque por clave comprometida)", 
+            "proteccion": "Rotar claves periódicamente, autenticación multifactor, guardar claves en gestores seguros.",
+            "imagen":"https://tse4.mm.bing.net/th/id/OIP.gZ1jzqiyzmyfICSW7ymZOgHaEK?pid=Api&P=0&h=180"
+
+        },
+        {
+            "ataque": "DNS spoofing (envenenamiento/alteración de DNS)", 
+            "proteccion": "Implementar DNSSEC, usar servidores DNS confiables, monitoreo de tráfico DNS.",
+            "imagen":"https://tse3.mm.bing.net/th/id/OIP.kFtK5QLMTSRy-PQOKeVf8wHaEK?pid=Api&P=0&h=180"
+
+        },
+        {
+            "ataque": " Rootkit", 
+            "proteccion": "Usar herramientas anti-rootkit, evitar instalar software dudoso, reinstalar el sistema si se detecta.",
+            "imagen":"https://tse4.mm.bing.net/th/id/OIP.MDQGxqtyaEFCZiseUoC4bAHaD3?pid=Api&P=0&h=180"
+        }
+
+        ];
+
+        const cuerpoTabla = document.querySelector("#tablaCiberseguridad tbody");
+
+        ataques.forEach(ataque =>{
+
+            const fila = document.createElement("tr");
+
+            fila.innerHTML = `
+            <td>${ataque.ataque}</td>
+            <td>${ataque.proteccion}</td>
+            <td><img src="${ataque.imagen}" alt="${ataque.ataque}"></td>
+            `;
+
+            cuerpoTabla.appendChild(fila);
+
+        });
+    </script>
+
+</body>
+</html>

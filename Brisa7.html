@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto</title>
+    <link href= "https://fonts.cdnfonts.com/css/daddy-smile" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/flamante-semislab" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/linden-hill" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+     
+</head>
+<body>
+  <!-- Esta API es DummyJSON Products API, permite acceder 
+        a la información de los productos en un listado, 
+        por nombre, imagen, descripción y más datos sobre
+        los productos-->
+  <style>
+    :root {
+      --barn-red: #780000ff;
+      --fire-brick: #c1121fff;
+      --papaya-whip: #fdf0d5ff;
+      --prussian-blue: #003049ff;
+      --air-superiority-blue: #669bbcff;
+     }
+  
+    p {
+      font-family: 'Linden Hill', sans-serif;
+      font-size: 17px;
+    }
+    body {
+      
+      text-align: center;
+      background-color: #fce4ec;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ec407a;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+      font-family: 'Daddy Smile', sans-serif;
+    }
+    #productos {
+      font-family: 'Flamante SemiSlab', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .tarjeta {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      width: 250px;
+      margin: 15px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .tarjeta:hover {
+      transform: scale(1.05);
+    }
+    .tarjeta img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background: #f8bbd0;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+  <nav class="navbar navbar-light" style="background-color: var(--prussian-blue);">
+    
+          <div class="container">
+            <a class="navbar-brand" href="index.html" style="color:var(--papaya-whip);">Inicio</a>
+    
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="nav navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropDownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 1 Ciberseguridad</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                    <a class="dropdown-item" href="Brisa1.html">Conceptos</a><br>
+                    <a class="dropdown-item" href="Brisa2.html">Ataques</a><br>
+                    <a class="dropdown-item" href="Brisa3.html">Protección</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="Brisa7.html" id="navbarDropDownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 2</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                    <a class="dropdown-item" href="Brisa4.html">Calculadora</a><br>
+                   <a class="dropdown-item" href="Brisa5.html">Perfil</a><br>
+                   <a class="dropdown-item" href="Brisa6.html">Peliculas</a><br>
+                   <a class="dropdown-item" href="Brisa7.html">Página final</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav ">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="unidad3.html" id="navbarDropDownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 3</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                    <a class="dropdown-item" href="/#7.html">Conceptos</a><br>
+                    <a class="dropdown-item" href="/#8.html">Ataques</a><br>
+                    <a class="dropdown-item" href="/#9.html">Protección</a>
+                  </div>
+                </li>
+              </ul>
+        </nav>
+
+  <header>
+    <h1>Catálogo de Productos</h1>
+  </header>
+
+  <div class="container" style="margin: 20px auto; max-width: 500px;">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Buscar producto..." id="busqueda">
+    <span class="input-group-btn">
+      <button class="btn btn-primary" type="button" id="btnBuscar" style="background-color: plum;">Buscar</button>
+    </span>
+  </div>
+</div>
+
+
+  <main id="productos"></main>
+
+  <footer>
+  <h3>Integrantes del equipo:</h3>
+  <div style="margin-top: 10px;">
+    <button class="btn btn-primary" style="margin:5px;">Melany Yaretzy Vicente Hernández</button>
+    <button class="btn btn-primary" style="margin:5px;">Carlos Daniel Segura Hernández</button>
+    <button class="btn btn-primary" style="margin:5px;">Ingrid Alejandra Sánchez de la Cruz</button>
+    <button class="btn btn-primary" style="margin:5px;">Karen Estephania Cruz Lemus</button>
+    <button class="btn btn-primary" style="margin:5px;">Brisa Cruz Santiago</button>
+  </div>
+</footer>
+
+
+
+  <script>
+
+    async function cargarProductos() {
+      const res = await fetch('https://dummyjson.com/products');
+      const data = await res.json();
+      const contenedor = document.getElementById('productos');
+      contenedor.innerHTML = '';
+
+      data.products.forEach(producto => {
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'tarjeta';
+        tarjeta.innerHTML = `
+          <img src="${producto.thumbnail}" alt="${producto.title}">
+          <h3>${producto.title}</h3>
+          <p>${producto.description}</p>
+          <p><b>Precio:</b> $${producto.price}</p>
+        `;
+        contenedor.appendChild(tarjeta);
+      });
+    }
+
+    cargarProductos();
+
+    const busqueda = document.getElementById('busqueda');
+    const btnBuscar = document.getElementById('btnBuscar');
+
+      btnBuscar.addEventListener('click', () => {
+        const termino = busqueda.value.toLowerCase();
+        filtrarProductos(termino);
+      });
+
+      busqueda.addEventListener('keyup', () => {
+        const termino = busqueda.value.toLowerCase();
+        filtrarProductos(termino);
+      });
+
+      function filtrarProductos(termino) {
+        const tarjetas = document.querySelectorAll('.tarjeta');
+        tarjetas.forEach(tarjeta => {
+          const titulo = tarjeta.querySelector('h3').textContent.toLowerCase();
+          const descripcion = tarjeta.querySelector('p').textContent.toLowerCase();
+          if(titulo.includes(termino) || descripcion.includes(termino)) {
+            tarjeta.style.display = 'block';
+          } else {
+            tarjeta.style.display = 'none';
+          }
+        });
+      }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.cdnfonts.com/css/nickerbocker-normal" rel="stylesheet">
+
+    <title>Brisa Cruz Santiago</title>
+</head>
+<body>
+  <style>
+     :root{
+    --barn-red: #780000ff;
+    --fire-brick: #c1121fff;
+    --papaya-whip: #fdf0d5ff;
+    --prussian-blue: #003049ff;
+    --air-superiority-blue: #669bbcff;
+    }
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: var(--air-superiority-blue);
+        color: #0f0000;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .tabla-ciber{
+        top:50px ;
+        width: 90%;
+        margin: 40px auto;
+        border-collapse: collapse;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        box-shadow: 0px 4px 15px black;
+        background-color: var(--papaya-whip);
+        border-radius: 12px;
+        overflow: hidden;
+        position: absolute;
+    }
+    .tabla-ciber thead{
+        background-color: var(--prussian-blue);
+        color:var(--papaya-whip);
+    }
+    .tabla-ciber th
+    .tabla-ciber td {
+        padding: 14px 18px;
+        text-align: center;
+        border: 1px solid var(--barn-red);
+        font-size: 16px;
+    }
+    .tabla-ciber th {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .tabla-ciber tr:nth-child(even){
+        background-color: var(--fire-brick);
+        color: var(--papaya-whip);
+    }
+    .tabla-ciber tr:nth-child(odd){
+        background-color: var(--papaya-whip);
+        color: var(--barn-red);
+    }
+    .table-ciber tr:hover {
+        background:var(--air-superiority-blue);
+        color: var(--prussian-blue);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+    }
+    .tabla-ciber img{
+        width: 70px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0,3);
+    }
+    h1{
+        top:50px;
+        position: absolute;
+    }
+
+  </style>
+<div class="container">
+    <nav class="navbar navbar-light" style="background-color:var(--prussian-blue); position: absolute;">
+
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color:var(--papaya-whip);">Inicio</a>
+ 
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  href="index.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 1 Ciberseguridad</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+          <a class="dropdown-item" href="Brisa1.html">Conceptos</a><br>
+          <a class="dropdown-item" href="Brisa2.html">Ataques</a><br>
+          <a class="dropdown-item" href="Brisa3.html">Protección</a>
+        </div>
+      </li>
+    </ul>
+      <ul class="nav navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  href="Brisa7.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 2</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+            <a class="dropdown-item" href="Brisa4.html">Calculadora</a><br>
+            <a class="dropdown-item" href="Brisa5.html">Perfil</a><br>
+            <a class="dropdown-item" href="Brisa6.html">Peliculas</a><br>
+            <a class="dropdown-item" href="Brisa7.html">Página final</a>
+          </div>
+        </li>
+        </ul>
+        <ul class="nav navbar-nav ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  href="unidad3.html" id="navbarDropDownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">UNIDAD 3</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+              <a class="dropdown-item"href="/#7.html">Conceptos</a><br>
+              <a class="dropdown-item"href="/#8.html">Ataques</a><br>
+              <a class="dropdown-item"href="/#9.html">Protección</a>
+            </div>
+          </li>
+          </ul>
+</nav>
+</div>
+
+    <table class="tabla-ciber" id="tablaCiberseguridad">
+        <tr>
+            <th>Ataque</th>
+            <th>Descripción</th>
+            <th>Impacto</th>
+            <th>Ejemplo</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+     </tbody>
+   
+    </table>
+    <script>
+
+        const ataques = [
+
+        {
+            "ataque": "Phishing", 
+            "descripcion": "Engaña al usuario para robar las credenciales mediante correos falsos.",
+            "impacto":"Robo de identidad, perdida de datos.",
+            "ejemplo": "Correo falso de un banco solicitando datos.",
+            "imagen":"https://www.lisot.com/wp-content/uploads/2021/06/que-es-phising.jpg"
+        },
+
+        {
+            "ataque": "Malware", 
+            "descripcion": "Término general para cualquier software malicioso diseñado para dañar, exfiltrar datos, espiar o tomar control de sistemas (incluye virus, troyanos, ransomwares, etc.).",
+            "impacto":"Pérdida de datos, interrupción de operaciones, costes por recuperación y rescates, daño reputacional y sanciones regulatorias.",
+            "ejemplo": "WannaCry (ransomware que en 2017 cifró archivos y pidió rescate).",
+            "imagen":"https://tse3.mm.bing.net/th/id/OIP.5cdoLehV841enwtw2hFFJgHaE7?pid=Api&P=0&h=180"
+        },
+
+        {
+            "ataque": "Virus", 
+            "descripcion": "Programa que se replica insertando su código en archivos ejecutables u otros ficheros; se propaga cuando esos archivos se ejecutan o se comparten.",
+            "impacto":"Corrupción o pérdida de archivos, propagación rápida dentro de redes, tiempo de inactividad y costes de limpieza.",
+            "ejemplo": "ILOVEYOU (2000) — virus que se propagó por correo electrónico y sobrescribió archivos.",
+            "imagen":"https://tse1.mm.bing.net/th/id/OIP.3OQFJ_iUJb7nu8_xzrIksQHaE7?pid=Api&P=0&h=180"
+        },
+
+        {
+            "ataque": "Worm (Gusano)", 
+            "descripcion":"Malware autorreplicable que se propaga automáticamente por redes (sin necesitar que el usuario ejecute un archivo).",
+            "impacto":"Congestión de redes, caída de servicios, efectos en infraestructuras críticas y costes por mitigación.",
+            "ejemplo": "SQL Slammer (2003) — Gusano que saturó tráfico de red explotando vulnerabilidad en servidores SQL.",
+            "imagen":"https://tse3.mm.bing.net/th/id/OIP.lOZBzvGja4b93aKGDWJOjAHaEK?pid=Api&P=0&h=180"
+        },
+
+        { 
+            "ataque": "Botnet", 
+            "descripcion":"Red de dispositivos (bots) infectados y controlados remotamente por un atacante (botmaster) para realizar tareas coordinadas.",
+            "impacto":"Fuente de ataques a gran escala (DDoS), abuso para fraude, envío masivo de spam, y dificultad para rastrear al operador.",
+            "ejemplo": "Mirai (2016) — convirtió dispositivos IoT infectados en una gran botnet usada para DDoS.",
+            "imagen":"https://adamlevin.com/wp-content/uploads/2018/03/ThinkstockPhotos-926538900.jpg"
+        },
+
+        {
+            "ataque": "DDoS (Distributed Denial of Service)", 
+            "descripcion":"Ataque que inunda un servicio con tráfico desde múltiples orígenes para agotar recursos y dejarlo inaccesible.",
+            "impacto":"Indisponibilidad del servicio, pérdida de ingresos, daño reputacional y costes para escalado y mitigación.",
+            "ejemplo": "Ataque contra Dyn (2016) utilizando la botnet Mirai, que dejó inaccesibles muchos sitios (Twitter, Netflix, etc.).",
+            "imagen":"https://media.geeksforgeeks.org/wp-content/uploads/20200410011058/Untitled216.png"
+
+        },
+
+        {
+            "ataque": "Packet sniffer (capturador de paquetes)", 
+            "descripcion":"Herramienta que captura y analiza paquetes de red; puede usarse legítimamente (diagnóstico) o maliciosamente para robar credenciales y datos en texto claro.",
+            "impacto":"Robo de credenciales, exposición de información sensible, compromisos de cuentas y acceso no autorizado.",
+            "ejemplo": "Un atacante en una red Wi-Fi abierta captura credenciales HTTP con un sniffer como Wireshark (uso malicioso).",
+            "imagen":"https://www.avast.com/hs-fs/hubfs/New_Avast_Academy/what_is_packet_sniffing_academy/What-is-Packet-Sniffing-01.png?width=3960&height=1800&name=What-is-Packet-Sniffing-01.png"
+
+        },
+        {
+            "ataque": "IP spoofing", 
+            "descripcion":"Falsificación de la dirección IP de origen en paquetes para suplantar otra máquina o evadir controles.",
+            "impacto":"Facilita ataques DDoS, evasión de filtrado, suplantación y confusión en auditorías forenses.",
+            "ejemplo": "Smurf amplificación (clásico): paquetes ICMP con IP de víctima dirigidos a redes broadcast para reflejar tráfico contra la víctima.",
+            "imagen":"https://www.anura.io/hs-fs/hubfs/2025-Blog/Fraud-Tidbit-Image_IP-Spoofing_sm.jpg?width=800&height=579&name=Fraud-Tidbit-Image_IP-Spoofing_sm.jpg"
+
+        },
+        {
+            "ataque": "MITM — Man-in-the-Middle (hombre en el medio)", 
+            "descripcion":"Atacante intercepta y posiblemente altera la comunicación entre dos partes que creen comunicarse directamente.",
+            "impacto":"Espionaje de comunicaciones, robo de credenciales, manipulación de datos y pérdida de confidencialidad e integridad.",
+            "ejemplo": "Atacante en una Wi-Fi pública realiza MITM y captura cookies/credenciales si la conexión no está cifrada correctamente.",
+            "imagen":"https://www.pandasecurity.com/es/mediacenter/src/uploads/2022/04/man-in-the-middle-attack-ES_02-Phases-of-man-in-middle-attack.png"
+
+        },
+        {
+            "ataque": "Compromised-key attack (ataque por clave comprometida)", 
+            "descripcion":"Uso de claves privadas o credenciales criptográficas que han sido robadas, expuestas o generadas con debilidad para acceder a sistemas cifrados.",
+            "impacto":"Acceso completo a sistemas, movimiento lateral, exfiltración de datos, y dificultad para detectar la intrusión mientras se usan credenciales legítimas.",
+            "ejemplo": "Fuga de claves SSH privadas de un administrador que permite acceso sin contraseña a servidores.",
+            "imagen":"https://static.vecteezy.com/system/resources/previews/013/619/476/large_2x/security-chain-gave-a-breakdown-compromised-security-network-hacker-attack-software-vulnerabilities-critical-vulnerability-defect-and-program-error-leakage-of-personal-and-secret-data-photo.jpg"
+
+        },
+        {
+            "ataque": "DNS spoofing (envenenamiento/alteración de DNS)", 
+            "descripcion":"Manipular respuestas DNS para devolver direcciones IP falsas, redirigiendo tráfico a servidores controlados por el atacante.",
+            "impacto":"Redirección de usuarios a sitios falsos (phishing), interceptación de credenciales, fuga de tráfico sensible y pérdida de confianza en servicios.",
+            "ejemplo": "Ataque de cache-poisoning descubierto por Dan Kaminsky (2008) que mostró vulnerabilidades en resolvers DNS.",
+            "imagen":"https://www.avast.com/hs-fs/hubfs/New_Avast_Academy/what_is_dns_poisoning_academy/What-is-DNS-poisoning-01.png?width=1320&height=600&name=What-is-DNS-poisoning-01.png"
+
+        },
+        {
+            "ataque": " Rootkit", 
+            "descripcion":"Conjunto de herramientas que ocultan la presencia de malware (procesos, archivos, conexiones) a nivel del sistema operativo, facilitando control persistente.",
+            "impacto":"Compromiso prolongado y oculto de sistemas, imposibilidad de detectar actividad maliciosa con facilidad, necesidad de reinstalación total y costes elevados de remediación.",
+            "ejemplo": "Rootkit instalado por el caso Sony BMG (2005) en CDs, que ocultaba software y abría vectores de seguridad (escándalo).",
+            "imagen":"https://img.freepik.com/premium-vector/rootkit-computer-program-hiding-malicious-actions-from-antiviruse_277904-23027.jpg?w=2000"
+
+        }
+
+        ];
+
+        const cuerpoTabla = document.querySelector("#tablaCiberseguridad tbody");
+
+        ataques.forEach(ataque =>{
+
+            const fila = document.createElement("tr");
+
+            fila.innerHTML = `
+            <td>${ataque.ataque}</td>
+            <td>${ataque.descripcion}</td>
+            <td>${ataque.impacto}</td>
+            <td>${ataque.ejemplo}</td>
+            <td><img src="${ataque.imagen}" alt="${ataque.ataque}"></td>
+            `;
+
+            cuerpoTabla.appendChild(fila);
+
+        });
+    </script>
+
+</body>
+</html>
